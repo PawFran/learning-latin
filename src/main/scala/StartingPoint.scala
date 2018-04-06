@@ -33,7 +33,7 @@ object StartingPoint extends App {
   }
 
   def getUsersAnswerFromKeyboard: NounTerms = {
-    val declension = Declension.fromString(readLine("which declension (nr) ? "))
+    val declension = Declension.fromString(readLine("which declension (nr with optional variant) ? "))
     val genus = Genus.fromString(readLine("which genus (m / f / n ? "))
     val number = Number.fromString(readLine("sing or pl ? "))
     val `case` = Case.fromString(readLine("which case ? "))

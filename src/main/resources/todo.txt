@@ -7,6 +7,9 @@ third declension: three variants. add variant to the tree but do not ask for it 
 take only a subset  of terms into account (ex. only first and third declension pluralis and second declension sing)ly if not
 if correct still display other possibilities (especially if not all of them were provided)
 option to turn out asking about specific term (ex. genus)
+other use case: generate grammatical terms only and ask for word
+add option to skip current word
+skip current word if any input is empty
 
 tests:
 different words generated

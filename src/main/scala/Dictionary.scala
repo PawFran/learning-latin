@@ -1,4 +1,4 @@
-import grammar.terms.{Ablativus, Accusativus, Case, Dativus, Declension, Femininum, FirstDeclension, Genetivus, Genus, Masculinum, Neutrum, Nominativus, Number, Pluralis, SecondDeclension, Singularis, Vocativus}
+import grammar.terms.{Ablativus, Accusativus, Case, Dativus, Declension, Femininum, FirstDeclension, Genetivus, Genus, Masculinum, Neutrum, Nominativus, Number, Pluralis, SecondDeclension, Singularis, ThirdDeclensionConsonantVariant, Vocativus}
 import grammar.types.NounTerms
 
 import scala.util.{Success, Try}
@@ -69,6 +69,62 @@ object Dictionary {
           Accusativus -> "oppida",
           Ablativus -> "oppidis",
           Vocativus -> "oppida"
+        )
+      )
+    ),
+    ThirdDeclensionConsonantVariant -> Map(
+      Masculinum -> Map(
+        Singularis -> Map(
+          Nominativus -> "imperator",
+          Genetivus -> "imperatoris",
+          Dativus -> "imperatori",
+          Accusativus -> "imperatorem",
+          Ablativus -> "imperatore",
+          Vocativus -> "imperator"
+        ),
+        Pluralis -> Map(
+          Nominativus -> "imperatores",
+          Genetivus -> "imperatorum",
+          Dativus -> "imperatoribus",
+          Accusativus -> "imperatores",
+          Ablativus -> "imperatoribus",
+          Vocativus -> "imperatores"
+        )
+      ),
+      Femininum -> Map(
+        Singularis -> Map(
+          Nominativus -> "lex",
+          Genetivus -> "legis",
+          Dativus -> "legi",
+          Accusativus -> "legem",
+          Ablativus -> "lege",
+          Vocativus -> "lex"
+        ),
+        Pluralis -> Map(
+          Nominativus -> "leges",
+          Genetivus -> "legorum",
+          Dativus -> "legibus",
+          Accusativus -> "leges",
+          Ablativus -> "legibus",
+          Vocativus -> "leges"
+        )
+      ),
+      Neutrum -> Map(
+        Singularis -> Map(
+          Nominativus -> "nomen",
+          Genetivus -> "nominis",
+          Dativus -> "nomini",
+          Accusativus -> "nomen",
+          Ablativus -> "nomine",
+          Vocativus -> "nomen"
+        ),
+        Pluralis -> Map(
+          Nominativus -> "nomina",
+          Genetivus -> "nominorum",
+          Dativus -> "nominibus",
+          Accusativus -> "nomina",
+          Ablativus -> "nominibus",
+          Vocativus -> "nomina"
         )
       )
     )
