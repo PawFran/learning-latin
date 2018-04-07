@@ -26,6 +26,10 @@ case object FourthDeclension extends Declension {
   override val toString = "Fourth declension"
 }
 
+case object FifthDeclension extends Declension {
+  override val toString = "Fifth declension"
+}
+
 case object UnspecifiedDeclension extends Declension {
   override val toString: String = "Unspecified declension"
 }
@@ -38,6 +42,7 @@ object Declension {
     case "3v" => ThirdDeclensionVowelVariant
     case "3m" => ThirdDeclensionMixedVariant
     case "4" | "four" | "fourth" => FourthDeclension
+    case "5" | "five" | "fifth" => FifthDeclension
     case _ => UnspecifiedDeclension
   }
 }

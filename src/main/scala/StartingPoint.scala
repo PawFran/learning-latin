@@ -10,7 +10,7 @@ object StartingPoint extends App {
   var proceed = true
 
   while(proceed) {
-    val generatedNoun = RandomWordGenerator.noun
+    val generatedNoun = WordGenerator.randomNoun
 
     println(generatedNoun.word)
 
@@ -18,11 +18,14 @@ object StartingPoint extends App {
       case Success(usersAnswer) =>
         val outcome = Dictionary.value(usersAnswer) match {
           case Some(answer) =>
-            if (answer == generatedNoun.word) "correct"
+            if (answer == generatedNoun.word) "\ncorrect"
             else s"""wrong.
                     |your answer: $usersAnswer
                     |correct answer is: ${generatedNoun.description}""".stripMargin
-          case None => s"could not find your combination in the dictionary: $usersAnswer"
+          case None =>
+            s"""could not find your combination in the dictionary: $usersAnswer
+               |possible answer: ${generatedNoun.description}
+             """.stripMargin
         }
 
         println(s"$outcome\n")

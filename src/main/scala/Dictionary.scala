@@ -1,4 +1,4 @@
-import grammar.terms.{Ablativus, Accusativus, Case, Dativus, Declension, Femininum, FirstDeclension, FourthDeclension, Genetivus, Genus, Masculinum, Neutrum, Nominativus, Number, Pluralis, SecondDeclension, Singularis, ThirdDeclensionConsonantVariant, ThirdDeclensionMixedVariant, ThirdDeclensionVowelVariant, Vocativus}
+import grammar.terms.{Ablativus, Accusativus, Case, Dativus, Declension, Femininum, FifthDeclension, FirstDeclension, FourthDeclension, Genetivus, Genus, Masculinum, Neutrum, Nominativus, Number, Pluralis, SecondDeclension, Singularis, ThirdDeclensionConsonantVariant, ThirdDeclensionMixedVariant, ThirdDeclensionVowelVariant, Vocativus}
 import grammar.types.NounDescription
 
 import scala.util.{Success, Try}
@@ -203,6 +203,26 @@ object Dictionary {
           Accusativus -> "cornua",
           Ablativus -> "cornibus",
           Vocativus -> "cornua"
+        )
+      )
+    ),
+    FifthDeclension -> Map(
+      Femininum -> Map(
+        Singularis -> Map(
+          Nominativus -> "res",
+          Genetivus -> "rei",
+          Dativus -> "rei",
+          Accusativus -> "rem",
+          Ablativus -> "re",
+          Vocativus -> "res"
+        ),
+        Pluralis -> Map(
+          Nominativus -> "res",
+          Genetivus -> "rerum",
+          Dativus -> "rebus",
+          Accusativus -> "res",
+          Ablativus -> "rebus",
+          Vocativus -> "res"
         )
       )
     )

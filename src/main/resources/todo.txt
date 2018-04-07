@@ -13,9 +13,13 @@ skip current word if any input is empty
 add possibility to specify probabilities when generating words
 store statistics
 assign greater probabilities to those words which are usually guessed wrong
+option to as only about some aspect (ex. declension)
+
+get more data from some online dictionary and use random words instead of hardcoded ones
 
 tests:
 different words generated
 correct
 not correct
 unspecified - or validating user's input
+verify if generator truly works according to uniform distribution
