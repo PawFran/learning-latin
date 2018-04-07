@@ -1,5 +1,5 @@
 import Dictionary.Dictionary
-import grammar.types.{Noun, NounTerms}
+import grammar.types.{Noun, NounDescription}
 
 object RandomWordGenerator {
   import scala.util.Random
@@ -13,7 +13,7 @@ object RandomWordGenerator {
     val number = dict(declension)(genus).keys.toVector(int(dict(declension)(genus).size))
     val `case` = dict(declension)(genus)(number).keys.toVector(int(dict(declension)(genus)(number).size))
 
-    val terms = NounTerms(declension, genus, number, `case`)
+    val terms = NounDescription(declension, genus, number, `case`)
 
     val word = dict(declension)(genus)(number)(`case`)
 

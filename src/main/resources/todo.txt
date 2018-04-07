@@ -10,6 +10,9 @@ option to turn out asking about specific term (ex. genus)
 other use case: generate grammatical terms only and ask for word
 add option to skip current word
 skip current word if any input is empty
+add possibility to specify probabilities when generating words
+store statistics
+assign greater probabilities to those words which are usually guessed wrong
 
 tests:
 different words generated

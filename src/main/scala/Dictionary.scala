@@ -1,5 +1,5 @@
-import grammar.terms.{Ablativus, Accusativus, Case, Dativus, Declension, Femininum, FirstDeclension, Genetivus, Genus, Masculinum, Neutrum, Nominativus, Number, Pluralis, SecondDeclension, Singularis, ThirdDeclensionConsonantVariant, Vocativus}
-import grammar.types.NounTerms
+import grammar.terms.{Ablativus, Accusativus, Case, Dativus, Declension, Femininum, FirstDeclension, Genetivus, Genus, Masculinum, Neutrum, Nominativus, Number, Pluralis, SecondDeclension, Singularis, ThirdDeclensionConsonantVariant, ThirdDeclensionMixedVariant, ThirdDeclensionVowelVariant, Vocativus}
+import grammar.types.NounDescription
 
 import scala.util.{Success, Try}
 
@@ -7,7 +7,7 @@ object Dictionary {
 
   type Dictionary = Map[Declension, Map[Genus, Map[Number, Map[Case, String]]]]
 
-  def value(noun: NounTerms): Option[String] =
+  def value(noun: NounDescription): Option[String] =
     Try(dict(noun.declension)(noun.genus)(noun.number)(noun.`case`)) match {
       case Success(word) => Some(word)
       case _ => None
@@ -125,6 +125,46 @@ object Dictionary {
           Accusativus -> "nomina",
           Ablativus -> "nominibus",
           Vocativus -> "nomina"
+        )
+      )
+    ),
+    ThirdDeclensionVowelVariant -> Map(
+      Neutrum -> Map(
+        Singularis -> Map(
+          Nominativus -> "vectigal",
+          Genetivus -> "vectigalis",
+          Dativus -> "vectigali",
+          Accusativus -> "vectigal",
+          Ablativus -> "vectigali",
+          Vocativus -> "vectigal"
+        ),
+        Pluralis -> Map(
+          Nominativus -> "vectigalia",
+          Genetivus -> "vectigalium",
+          Dativus -> "vectigalibus",
+          Accusativus -> "vectigalia",
+          Ablativus -> "vectigalibus",
+          Vocativus -> "vectigalia"
+        )
+      )
+    ),
+    ThirdDeclensionMixedVariant -> Map(
+      Femininum -> Map(
+        Singularis -> Map(
+          Nominativus -> "urbs",
+          Genetivus -> "urbis",
+          Dativus -> "urbi",
+          Accusativus -> "urbem",
+          Ablativus -> "urbe",
+          Vocativus -> "urbs"
+        ),
+        Pluralis -> Map(
+          Nominativus  -> "urbes",
+          Genetivus -> "urbium",
+          Dativus -> "urbibus",
+          Accusativus -> "urbes",
+          Ablativus -> "urbibus",
+          Vocativus -> "urbes"
         )
       )
     )
