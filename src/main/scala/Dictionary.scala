@@ -1,4 +1,4 @@
-import grammar.terms.{Ablativus, Accusativus, Case, Dativus, Declension, Femininum, FirstDeclension, Genetivus, Genus, Masculinum, Neutrum, Nominativus, Number, Pluralis, SecondDeclension, Singularis, ThirdDeclensionConsonantVariant, ThirdDeclensionMixedVariant, ThirdDeclensionVowelVariant, Vocativus}
+import grammar.terms.{Ablativus, Accusativus, Case, Dativus, Declension, Femininum, FirstDeclension, FourthDeclension, Genetivus, Genus, Masculinum, Neutrum, Nominativus, Number, Pluralis, SecondDeclension, Singularis, ThirdDeclensionConsonantVariant, ThirdDeclensionMixedVariant, ThirdDeclensionVowelVariant, Vocativus}
 import grammar.types.NounDescription
 
 import scala.util.{Success, Try}
@@ -102,7 +102,7 @@ object Dictionary {
         ),
         Pluralis -> Map(
           Nominativus -> "leges",
-          Genetivus -> "legorum",
+          Genetivus -> "legum",
           Dativus -> "legibus",
           Accusativus -> "leges",
           Ablativus -> "legibus",
@@ -120,7 +120,7 @@ object Dictionary {
         ),
         Pluralis -> Map(
           Nominativus -> "nomina",
-          Genetivus -> "nominorum",
+          Genetivus -> "nominum",
           Dativus -> "nominibus",
           Accusativus -> "nomina",
           Ablativus -> "nominibus",
@@ -159,12 +159,50 @@ object Dictionary {
           Vocativus -> "urbs"
         ),
         Pluralis -> Map(
-          Nominativus  -> "urbes",
+          Nominativus -> "urbes",
           Genetivus -> "urbium",
           Dativus -> "urbibus",
           Accusativus -> "urbes",
           Ablativus -> "urbibus",
           Vocativus -> "urbes"
+        )
+      )
+    ),
+    FourthDeclension -> Map(
+      Masculinum -> Map(
+        Singularis -> Map(
+          Nominativus -> "exercitus",
+          Genetivus -> "exercitus",
+          Dativus -> "exercitui",
+          Accusativus -> "exercitum",
+          Ablativus -> "exercitu",
+          Vocativus -> "exercitus"
+        ),
+        Pluralis -> Map(
+          Nominativus -> "exercitus",
+          Genetivus -> "exercituum",
+          Dativus -> "exercitibus",
+          Accusativus -> "exercitus",
+          Ablativus -> "exercitibus",
+          Vocativus -> "exercitus"
+        )
+      ),
+      Neutrum -> Map(
+        Singularis -> Map(
+          Nominativus -> "cornu",
+          Genetivus -> "cornus",
+          Dativus -> "cornu",
+          Accusativus -> "cornu",
+          Ablativus -> "cornu",
+          Vocativus -> "cornu"
+        ),
+        Pluralis -> Map(
+          Nominativus -> "cornua",
+          Genetivus -> "cornuum",
+          Dativus -> "cornibus",
+          Accusativus -> "cornua",
+          Ablativus -> "cornibus",
+          Vocativus -> "cornua"
         )
       )
     )
