@@ -14,6 +14,10 @@ add possibility to specify probabilities when generating words
 store statistics
 assign greater probabilities to those words which are usually guessed wrong
 option to as only about some aspect (ex. declension)
+add infinitive to conjugation dictionary
+some generic code for generating random words
+generalize somehow fromString methods
+recursive function for dictionary.value method
 
 get more data from some online dictionary and use random words instead of hardcoded ones
 

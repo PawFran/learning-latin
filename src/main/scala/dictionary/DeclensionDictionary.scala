@@ -1,11 +1,13 @@
+package dictionary
+
 import grammar.terms.{Ablativus, Accusativus, Case, Dativus, Declension, Femininum, FifthDeclension, FirstDeclension, FourthDeclension, Genetivus, Genus, Masculinum, Neutrum, Nominativus, Number, Pluralis, SecondDeclension, Singularis, ThirdDeclensionConsonantVariant, ThirdDeclensionMixedVariant, ThirdDeclensionVowelVariant, Vocativus}
 import grammar.types.NounDescription
 
 import scala.util.{Success, Try}
 
-object Dictionary {
+object DeclensionDictionary {
 
-  type Dictionary = Map[Declension, Map[Genus, Map[Number, Map[Case, String]]]]
+  type DeclensionDictionary = Map[Declension, Map[Genus, Map[Number, Map[Case, String]]]]
 
   def value(noun: NounDescription): Option[String] =
     Try(dict(noun.declension)(noun.genus)(noun.number)(noun.`case`)) match {
@@ -13,7 +15,7 @@ object Dictionary {
       case _ => None
     }
 
-  implicit val dict: Dictionary = Map(
+  implicit val dict: DeclensionDictionary = Map(
     FirstDeclension -> Map(
       Femininum -> Map(
         Singularis -> Map(
